@@ -1,6 +1,3 @@
-####关注微信公众号生信狂人团队
-###遇到代码报错等不懂的问题可以添加微信scikuangren进行答疑
-
 library(dplyr)
 library(coloc)
 library(data.table)

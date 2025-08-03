@@ -18,7 +18,7 @@ library(IlluminaHumanMethylation450kanno.ilmn12.hg19)
 
 setwd("/media/desk16/iyun3811/R/jiajihua/step0")
 
-mygene="IRF1"#改为自己的基因
+mygene="IRF1"
 
 ann450k <- getAnnotation(IlluminaHumanMethylation450kanno.ilmn12.hg19)
 

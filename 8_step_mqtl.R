@@ -1,7 +1,3 @@
-####关注微信公众号生信狂人团队
-###遇到代码报错等不懂的问题可以添加微信scikuangren进行答疑
-###作者邮箱：sxkrteam@shengxinkuangren.com
-
 
 
 #install.packages("ggplot2")
@@ -30,10 +26,6 @@ foreach(i=genelist1, .errorhandling = "pass") %do%{
     pval_col = "pval",
     samplesize_col = "samplesize")
   
-  #数据与代码声明
-  #如果没有购买SCI狂人团队或者生信狂人团队的正版会员
-  #没有经过我们的同意，擅自使用我们整理好的数据与代码发文章
-  #如果被我们发现你的文章用了我们的数据与代码，我们将使用一切手段让你的文章撤稿
   outc_rt <- read_outcome_data(
     snps = expo_rt$SNP,
     filename = "CST7cg.txt.gz",
@@ -79,19 +71,10 @@ foreach(i=genelist1, .errorhandling = "pass") %do%{
                             egger_intercept_se=pleiotropy$se,
                             egger_intercept_pval=pleiotropy$pval
   ))
-  #####################################
-  #数据与代码声明
-  #如果没有购买SCI狂人团队或者生信狂人团队的正版会员
-  #没有经过我们的同意，擅自使用我们整理好的数据与代码发文章
-  #如果被我们发现你的文章用了我们的数据与代码，我们将使用一切手段让你的文章撤稿
+
   p1 <- mr_scatter_plot(mr_result, harm_rt)
   ggsave(p1[[1]], file=paste0(filename,"/scatter.pdf"), width=8, height=8)
   
-  #####################################
-  #数据与代码声明
-  #如果没有购买SCI狂人团队或者生信狂人团队的正版会员
-  #没有经过我们的同意，擅自使用我们整理好的数据与代码发文章
-  #如果被我们发现你的文章用了我们的数据与代码，我们将使用一切手段让你的文章撤稿
   
   singlesnp_res<- mr_singlesnp(harm_rt)
   singlesnpOR=generate_odds_ratios(singlesnp_res)
@@ -110,7 +93,3 @@ foreach(i=genelist1, .errorhandling = "pass") %do%{
 
 write.table(result,"mqtl_gene.txt",sep = "\t",quote = F,row.names = F)
 
-#数据与代码声明
-#如果没有购买SCI狂人团队或者生信狂人团队的正版会员
-#没有经过我们的同意，擅自使用我们整理好的数据与代码发文章
-#如果被我们发现你的文章用了我们的数据与代码，我们将使用一切手段让你的文章撤稿
